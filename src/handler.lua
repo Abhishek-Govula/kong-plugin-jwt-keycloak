@@ -322,7 +322,7 @@ end
 
 
 function JwtKeycloakHandler:access(conf)
-    JwtKeycloakHandler.super.access(self)
+    -- JwtKeycloakHandler.super.access(self)
 
     -- check if preflight request and whether it should be authenticated
     if not conf.run_on_preflight and kong.request.get_method() == "OPTIONS" then
